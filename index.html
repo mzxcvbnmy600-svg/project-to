@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="lagn">
+        <button class="lang-btn" id="languageToggle">
+            <i class="fas fa-language"></i><span id="btnText">English</span>
+        </button>
+    </div>
+    <!-- <div class="login">
+        <button><i class="fas fa-language"></i>English</button>
+    </div>-->
+    <div class="mmm">
+        <img src="data:image/jpeg;base64,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"
+            alt="انتظر قليلا">
+    </div>
+
+
+
+    <header>
+        <div class="container">
+            <img src="https://www.noor-book.com/publice/images/nooricon.svg" alt="logo">
+            <nav>
+                <a href="#"> <i class="fa-solid fa-home"> </i> Home</a>
+                <a href="index1.html"><i class="fa-solid fa-book"> </i> Book Categories</a>
+                <a href="index5.html"><i class="fa-solid fa-users"> </i> Authors of books</a>
+                <a href="#"> <i class="fa-solid fa-bars"></i> Menu</a>
+                <a href="#"><i class="fa-solid fa-search"> </i> Search</a>
+                <a href="index3.html"> <button><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign
+                        in</button></a>
+                <a href="index4.html"> <button><i class="fa-solid fa-user"></i>Sign up</button></a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="login-box">
+        <h1>Noor Lirary</h1>
+        <p>Artificial intelligence search engine for books</p>
+        <div class="input-box">
+            <input type="search" name="Search Books,Author or Category" id="Search Books,Author or Category"
+                placeholder="🔍 Search Books,Author or Category">
+            <button>Search</button>
+        </div>
+
+        <div class="hero-tags">
+            <span>Trending today</span>
+            <span>Popular books</span>
+            <span>Latest Books</span>
+        </div>
+
+    </div>
+
+    <div class="main-container">
+
+        <div class="content">
+            <img src="https://www.noor-book.com/publice/images/online-education.svg" alt="Online Education">
+            <h4>8,000,000 Visitors per month</h4>
+            <p>More than 8 million visitors who are interested in Arabic books visit the Noor Library website every
+                month around the world</p>
+        </div>
+        <div class="content">
+            <img src="https://www.noor-book.com/publice/images/home_search.svg" alt="Home Search">
+            <h4>100,000 A daily search</h4>
+            <p>More than 100,000 searches for an Arabic book happen daily</p>
+        </div>
+
+        <div class="content">
+            <img src="https://www.noor-book.com/publice/images/digital-library.svg" alt="Digital Library">
+            <h4>100,000 A daily search</h4>
+            <p>More than 100,000 searches for an Arabic book happen daily</p>
+        </div>
+
+        <div class="content">
+            <img src="https://www.noor-book.com/publice/images/mobile-app.svg" alt="Mobile App">
+            <h4>312,888 Authors</h4>
+            <p>Noor Library aims to create the largest database of Arabic book authors throughout history
+            </p>
+        </div>
+
+        <div class="ppp">
+            <button>Start Prooting the book
+                --Paid Advertising--
+            </button>
+
+            <button>Start Prooting the book
+                --Paid Advertising--
+            </button>
+        </div>
+        <div class="ddd">
+            <p>Soon, enabling authors, publishing houses and libraries to sell electronic and paper books through the
+                Noor Library platform</p>
+        </div>
+    </div>
+
+
+    <div class="hed">
+        <!-- <i class="fas fa-book-open"></i>
+        <i class="fas fa-book-open"></i>
+        <i class="fas fa-book-open"></i> -->
+        <a href="#"> Trending today</a>
+        <a href="#">Popular books</a>
+        <a href="#">Popular books</a>
+
+    </div>
+    <main class="container main-layout">
+
+        <div class="sidebar">
+
+            <div class="sidebar-box">
+                <h3>Authors of books <button><i class="fa-solid fa-search"> </i></button></h3>
+                <ul>
+                    <li><i class="fa-solid fa-book"> </i>  Novels And Literary Stories</li>
+                    <li><i class="fa-solid fa-book"> </i>  Islamic Religion</li>
+                    <li><i class="fa-solid fa-book"> </i>  Human Development And S...</li>
+                    <li><i class="fa-solid fa-book"> </i>  History</li>
+                    <li><i class="fa-solid fa-book"> </i>  Islamic Fiqh</li>
+                    <li><i class="fa-solid fa-book"> </i>  Literature</li>
+                    <li><i class="fa-solid fa-book"> </i>  Interpretation Of The Koran</li>
+                    <li><i class="fa-solid fa-book"> </i>  Philosophy And Logic</li>
+                    <li><i class="fa-solid fa-book"> </i>  Islamic Faith</li>
+                    <li><i class="fa-solid fa-book"> </i>  The Culture</li>
+                    <li><i class="fa-solid fa-book"> </i>  Biographies, Translations And Life...</li>
+                    <li><i class="fa-solid fa-book"> </i>  Biography Of The Prophet Muhamm...</li>
+                    <li><i class="fa-solid fa-book"> </i>  Psychology</li>
+                    <li><i class="fa-solid fa-book"> </i>  Teaching English English</li>
+                    <li><i class="fa-solid fa-book"> </i>  Islamic Philosophy</li>
+                    <li><i class="fa-solid fa-book"> </i>  Arabic Literature</li>
+                    <li><i class="fa-solid fa-book"> </i>  Arabic</li>
+
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h3>Authors of books <button><i class="fa-solid fa-search"> </i></button></h3>
+                <ul>
+                    <li><i class="fa-solid fa-book"> </i> Novels And Literary Stories</li>
+                    <li><i class="fa-solid fa-book"> </i> Islamic Religion</li>
+                    <li><i class="fa-solid fa-book"> </i> Human Development And S...</li>
+                    <li><i class="fa-solid fa-book"> </i> History</li>
+                    <li><i class="fa-solid fa-book"> </i> Islamic Fiqh</li>
+                    <li><i class="fa-solid fa-book"> </i> Literature</li>
+                    <li><i class="fa-solid fa-book"> </i> Interpretation Of The Koran</li>
+                    <li><i class="fa-solid fa-book"> </i> Philosophy And Logic</li>
+                    <li><i class="fa-solid fa-book"> </i> Islamic Faith</li>
+                    <li><i class="fa-solid fa-book"> </i> The Culture</li>
+                    <li><i class="fa-solid fa-book"> </i> Biographies, Translations And Life...</li>
+                    <li><i class="fa-solid fa-book"> </i> Biography Of The Prophet Muhamm...</li>
+                    <li><i class="fa-solid fa-book"> </i> Psychology</li>
+                    <li><i class="fa-solid fa-book"> </i> Teaching English English</li>
+                    <li><i class="fa-solid fa-book"> </i> Islamic Philosophy</li>
+                    <li><i class="fa-solid fa-book"> </i> Arabic Literature</li>
+                    <li><i class="fa-solid fa-book"> </i> Arabic</li>
+
+                </ul>
+            </div>
+
+            <div class="sidebar-box">
+                <h3>Authors of books <button><i class="fa-solid fa-search"> </i></button></h3>
+                <ul>
+                    <li><i class="fa-solid fa-book"> </i> Novels And Literary Stories</li>
+                    <li><i class="fa-solid fa-book"> </i> Islamic Religion</li>
+                    <li><i class="fa-solid fa-book"> </i> Human Development And S...</li>
+                    <li><i class="fa-solid fa-book"> </i> History</li>
+                    <li><i class="fa-solid fa-book"> </i> Islamic Fiqh</li>
+                    <li><i class="fa-solid fa-book"> </i> Literature</li>
+                    <li><i class="fa-solid fa-book"> </i> Interpretation Of The Koran</li>
+                    <li><i class="fa-solid fa-book"> </i> Philosophy And Logic</li>
+                    <li><i class="fa-solid fa-book"> </i> Islamic Faith</li>
+
+
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="book-grid">
+            <div class="book-card">
+                <div class="stars">
+
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star g"></i>
+                    <p>(2080)</p>
+                </div>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/2/f/a/1/afd77849b0fa1244ff0621a2b08d0a47.jpg.webp"
+                    alt="Book Cover">
+                <h4>النصر وصفات المؤمنين
+                </h4>
+                <a href="#">Ibrahim Abd Allah</a>
+
+            </div>
+
+            <div class="book-card">
+                <div class="stars">
+
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star g"></i>
+                    <p>(2080)</p>
+                </div>
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/5/6/f/1/37c0e52fcb6f1d3f8d7171731c72f1fc.png.webp"
+                    alt="Book Cover">
+                <h4>Diseas And Cuse</h4>
+                <a href="#"> ibn Qayyim al-Jawziyya</a>
+
+            </div>
+
+            <div class="book-card">
+                <div class="stars">
+
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star g"></i>
+                    <p>(2080)</p>
+                </div>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/2/3/6/9/82ef1d5cbe369105299446585c45232d.jpeg.webp"
+                    alt="Book Cover">
+                <!-- <img src="https://www.noor-book.com/publice/images/public_domain.svg" alt=""> -->
+                <h4>Crime And Punishment Hd Version</h4>
+                <a href="#">Fedor Dostoevsky</a>
+
+            </div>
+
+            <div class="book-card">
+                <div class="stars">
+
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star g"></i>
+                    <p>(2080)</p>
+                </div>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/3/7/7/8/59ed8a2d987780b86dd1b99294ec3e41.png.webp"
+                    alt="Book Cover">
+                <h4>Sahih Bukhari</h4>
+                <a href="#">Muhammad Bin Ismail</a>
+
+            </div>
+
+
+
+
+            <div class="book-card">
+                <div class="stars">
+
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star g"></i>
+                    <p>(2080)</p>
+                </div>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/9/9/5/a/857b3068b995a1f3abd18552397f2051.png.webp"
+                    alt="Book Cover">
+                <h4>White Nights</h4>
+                <a href="#">Fyodor Dostoevsky</a>
+
+            </div>
+
+
+            <div class="book-card">
+                <div class="stars">
+
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star g"></i>
+                    <p>(2080)</p>
+                </div>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/2/d/f/7/57dd4b55e9df71ce767cb49aa7be8fad.png.webp"
+                    alt="Book Cover">
+                <h4>a1 6000 جملة شائعة ومستخدمة في الحياة اليومية
+                </h4>
+                <a href="#">Elaa Arabi</a>
+
+            </div>
+
+
+            <div class="book-card">
+                <div class="stars">
+
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star g"></i>
+                    <p>(2080)</p>
+                </div>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/9/e/b/d/56d83b9aebebdc2d6ea25e97f7b6f521.png.webp"
+                    alt="Book Cover">
+                <h4>The Beginning And The End Ibn Kathir</h4>
+                <a href="#">Ismail Bin Omar Bin</a>
+
+            </div>
+
+            <div class="book-card">
+                <div class="stars">
+
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star y"></i>
+                    <i class="fa-solid fa-star g"></i>
+                    <p>(2080)</p>
+                </div>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/8/5/a/d/701e00ba3a5adbe39bb4d8b694212b2a.png.webp"
+                    alt="Book Cover">
+                <h4>Lisan Al Arab - Dar Al Maaref</h4>
+                <a href="#">Ibn Manzur</a>
+
+            </div>
+
+
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(2080)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/2/0/f/7/6ce02221080f79c4faa30de23cd344e0.jpg.webp"
+                    alt="Book Cover">
+                <h4>مشروع المخلوق 13</h4>
+                <a href="#">مخلوق موجود مؤمن</a>
+
+            </div>
+
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(2080)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/2/b/8/b/e8debbe4eeb8b147e14ae1bfb7d74f8b.JPG.webp"
+                    alt="Book Cover">
+                <h4>250 Techniques In Psychological</h4>
+                <a href="#">Lama Fayad</a>
+
+            </div>
+
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(2080)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/3/0/a/9/4d90187b280a9d9b2a961c4dfffdc441.png.webp"
+                    alt="Book Cover">
+                <h4>Sealed Nectar</h4>
+                <a href="#">Safiur Rahman</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(2080)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/1/d/d/5/02f62b4165dd537df60326da06d3724d.jpg.webp"
+                    alt="Book Cover">
+                <h4>Interpretation Of The Great Qur'an Tafsir Ibn</h4>
+                <a href="#">Ismail Bin Omar Bin</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(2080)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/2/6/b/8/628dd2af4d6b8931be3c95aedc4e5ed9.png.webp"
+                    alt="Book Cover">
+                <h4> I Missed A Prayer</h4>
+                <a href="#">Islam Gamal</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(2080)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/3/5/3/7/c7a2567629537cdb9808366d619afce8.png.webp"
+                    alt="Book Cover">
+                <h4> The Prince</h4>
+                <a href="#"> Niccolò Machiavelli</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(2080)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/2/a/7/e/71da43f4a9a7eca5902dac0643f8b59e.png.webp"
+                    alt="Book Cover">
+                <h4> Research Methodology</h4>
+                <a href="#"> د/ محمد سرحان علي</a>
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(2080)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/5/3/9/c/65447c123739ce01530b8c624254ac64.jpg.webp"
+                    alt="Book Cover">
+                <h4> The First Time I Reflect On The Qur’an (your</h4>
+                <a href="#">Adel Muhammad Khalil</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(85)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/1/7/0/9/5882da407d7099eaf0b16c85d85e9f3c.png.webp"
+                    alt="Book Cover">
+                <h4> Dictionary Arabic English The Dictionary Arabic</h4>
+                <a href="#">م الدراسات والبحوث</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(649)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/1/c/5/1/0dd230203cc5124da6eada9e70c384f9.jpg.webp"
+                    alt="Book Cover">
+                <h4> Riyadh Al-salihin From The Hadith Of The</h4>
+                <a href="#">Yahya Bin Sharaf</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p> (780)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/1/b/a/f/31ae885713baf14fc47c00fff34f704d.jpg.webp"
+                    alt="Book Cover">
+                <h4>The Resurrection Increased In The</h4>
+                <a href="#">Ibn Qayyim Al-Jawziyya</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(580)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/3/1/f/5/2ce9a9fe551f594f2493d3b63753b226.jpg.webp"
+                    alt="Book Cover">
+                <h4>Interpretation Of Al-saadi - Tayseer Al-karim Al-</h4>
+                <a href="#">Abd AlRahman Bin</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(340)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/13/1/6/f/14565c125d16f529563b7bcb0687cfb4.png.webp"
+                    alt="Book Cover">
+                <h4>Nour Al-bayan To Teach Reading And Recitation</h4>
+                <a href="#">Muhammad Hassan</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p> (275)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/6/6/9/c/79df8f61c669c0b181d1ddc66b4aaecd.png.webp"
+                    alt="Book Cover">
+                <h4>Biography Of The Heraldry I House Of Ideas</h   4>
+                <a href="#">Al-Dhahabi</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p>(27)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/5/1/a/0/970df04f3b1a0956bd7343fb8b25ed92.png.webp"
+                    alt="Book Cover">
+                <h4>The Way To Recover From Porn Addiction (an</h4>
+                <a href="#">Dr. Mohamed Abdul</a>
+
+            </div>
+
+            <div class="book-card">
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star y"></i>
+                <i class="fa-solid fa-star g"></i>
+                <p> (5,567)</p>
+
+                <img src="https://www.noor-book.com/publice/covers_cache_webp/1/5/7/d/76fbc6dd1557d2f0f1b5ab2dd787007e.jpg.webp"
+                    alt="Book Cover">
+                <h4>The Holy Quran</h4>
+                <a href="#">The Words Of God</a>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

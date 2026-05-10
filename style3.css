@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #149e9e;
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 600px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.container img {
+    width: 100px;
+    padding: 10px;
+}
+
+.container h2 {
+    color: #149e9e;
+    padding: 10px;
+}
+
+.container p {
+    color: #149e9e;
+    padding: 10px;
+}
+
+/* .container input {
+    width: 55%;
+    padding: 10px;
+    margin: 10px;
+} */
+
+.sign_up button {
+    width: 310px;
+    box-shadow: 0 0 8px #00000088;
+    background-color: #149e9e;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 20px;
+    user-select: none;
+    color: #fff;
+    border: none;
+    outline: none;
+    min-width: 120px;
+    cursor: pointer;
+
+}
+
+.btn p {
+    padding: 20px;
+    color: #808080;
+}
+
+.btn h4 {
+    color: #3a3535;
+    padding: 8px;
+    margin: 10px 20px;
+}
+
+.btn h4 a {
+    color: #149e9e;
+    text-decoration: none;
+}
+
+.butan button {
+    background-color: #dd2a2a;
+    width: 310px;
+    box-shadow: 0 0 8px #00000088;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 20px;
+    user-select: none;
+    color: #fff;
+    border: none;
+    outline: none;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+.mnb button {
+    background-color: steelblue;
+    width: 310px;
+    box-shadow: 0 0 8px #00000088;
+    padding: 6px 12px;
+    margin: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    user-select: none;
+    color: #fff;
+    border: none;
+    outline: none;
+    min-width: 120px;
+    cursor: pointer;
+}
+
+
+
+.input-box{
+    margin: 10px;
+    
+    position: relative;
+
+}
+
+.input-box input{
+    width: 300px;
+    border: 2px solid  #149e9e;
+    border-radius: 5px;
+    padding: 8px 35px;
+    font-size: 20px;
+    outline: none;
+}
+
+.input-box label{
+top: 10px;
+left: 10px;
+color: grey;
+position: absolute;
+}
+
+.input-box input:invalid ~ label{
+    color: #fff;
+    background-color: #149e9e;
+    padding: 3px 6px;
+    border-radius: 5px;
+    top: -20px;
+    left: 5px;
+
+}
+.box{
+    margin: 40px;
+}
+
+.box a{
+    text-decoration: none;
+    padding: 15px; 
+    color: #fff;
+    border-radius: 10px;
+    /* background-color: #fff; */
+    
+}
+
+.box a:hover{
+    background-color: #fff;
+    border-radius: 10px;
+    color: #149e9e;
+}
